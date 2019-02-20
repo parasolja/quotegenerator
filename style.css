@@ -11,20 +11,19 @@ body {
 }
 
 #bgimg {
-	background-image: url("cottoncandy.jpg");
+	background-image: url("furr.jpg");
 	background-size: 100%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	text-align: center;
 	min-height: 700px;
-	margi
 }
 
 .caption {
 	font-family: 'Pacifico', cursive;
 	font-size: 100px;
 	text-align: center;
-	padding-top: 100px;
+	padding-top: 80px;
 	color: white;
 }
 
@@ -32,7 +31,7 @@ body {
 	background-color: transparent;
 }
 
-#quote-btn {
+.quoteBtn {
 	display: inline-block;
 	padding: 15px 25px;
 	font-size: 24px;
@@ -43,8 +42,24 @@ body {
 	z-index: 2;
 }
 
+.removeQuotebtn {
+	display: inline-block;
+	padding: 15px 25px;
+	font-size: 24px;
+	color: #fff;
+	background-color: #F8C5E2;
+	border-radius: 20px;
+	margin-top: 40px;
+	z-index: 2;
+}
+
+#randomQuote {
+	color: white;
+	padding-top: 65px;
+}
+
 #main {
-	min-height: 200px;
+	min-height: 225px;
 	background-color: #CC819E;
 }
 
@@ -131,10 +146,45 @@ body {
 	max-height: 200px;
 }
 
-#jake {
+#pic-quote {
 	padding-left: 50px;
 }
 
 #message-bmo {
 	background-color: #CC819E;
+}
+
+.container-fluid {
+	min-height: 550px;
+}
+
+#thirdBlocktitle {
+	font-family: 'Pacifico', cursive;
+	font-size: 100px;
+	text-align: center;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	color: #ff80c0;
+}
+
+.customQuotebtn {
+	display: inline-block;
+	padding: 15px 25px;
+	font-size: 24px;
+	color: #fff;
+	background-color: #F8C5E2;
+	border-radius: 20px;
+	margin-top: 50px;
+	z-index: 2;
+}
+
+.removeCustomquoteBtn {
+	display: inline-block;
+	padding: 15px 25px;
+	font-size: 24px;
+	color: #fff;
+	background-color: #F8C5E2;
+	border-radius: 20px;
+	margin-top: 50px;
+	z-index: 2;	
 }
