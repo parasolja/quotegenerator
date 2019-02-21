@@ -156,6 +156,7 @@ body {
 
 .container-fluid {
 	min-height: 550px;
+	background-color: #8080c0;
 }
 
 #thirdBlocktitle {

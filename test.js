@@ -44,11 +44,14 @@ function getExpressionFromquoteParts() {
 		   middle[indexMiddle] + " " +
 		   last[indexLast];
 }
+
+// rewrite function name
 function displayQuote() {
 	var randomQuote = getExpressionFromquoteParts();
 	document.getElementById('randomQuote').innerHTML = "<b>" + randomQuote + "</b>";
 }
 
+//rewrite function name
 function clearQuote() {
 	document.getElementById('randomQuote').innerHTML = "";
 }
@@ -69,6 +72,61 @@ function indexCombinationAllowed(indexFirst, indexMiddle, indexLast) {
 }
 
 
-//Custom Quote Generator 
+//Custom Quote Generator
+
+// better function name
+function getExpressionFromquoteParts2() {
+	var quoteThemeDropdown = document.getElementById("quoteTheme");
+	var qtdIndex = quoteThemeDropdown.selectedIndex;
+	if(qtdIndex === 0) {
+		// display message, uebungsaufgabe
+		return "";
+	} else {
+		// explain why -1
+		var first = quoteParts[qtdIndex-1].first;
+		var middle = quoteParts[qtdIndex-1].middle;
+	    var last = quoteParts[qtdIndex-1].last;
+
+	    var indexFirst = getRandomNumberBetweenZeroAnd(first.length);
+	    var indexMiddle = getRandomNumberBetweenZeroAnd(middle.length);
+	    var indexLast = getRandomNumberBetweenZeroAnd(last.length);
+	    
+		return first[indexFirst] + " " +
+			   middle[indexMiddle] + " " +
+			   last[indexLast];
+	}
+}
+
+
+//rewrite function name
+function displayCustomQuote() {
+	var numbersDropdown = document.getElementById("numbers");
+	var numbersSelected = numbersDropdown.selectedIndex;
+	if(numbersSelected === 0) {
+		// message: select amount of custom quotes
+	} else {
+		// remove old quotes
+		clearCustomQuote();
+
+		// generate multiple quotes (as defined in numbers-dropdown)
+		var i;
+		for (i = 1; i <= numbersSelected; i++) {
+			var randomCustomQuote = getExpressionFromquoteParts2();
+			var formerInnerHtml = document.getElementById('customQuote').innerHTML;
+			document.getElementById('customQuote').innerHTML = 
+				formerInnerHtml + "<b>" + randomCustomQuote + "</b></br></br>";
+		}
+	}
+}
+
+//rewrite function name
+function clearCustomQuote() {
+	document.getElementById('customQuote').innerHTML = "";
+}
+
+
+
+
+
 
 
