@@ -30,37 +30,13 @@
 				<button onclick="clearQuote()" class="removeQuotebtn">meh!</button>
 			</div>
 		</div>
-		<div class="row" id="main">
-			<div class="col-md-4 offset-md-4"></div>
-			<div class="col-8" id="main">
-				<div class="box1 sb1">
-					Unhappy with your results? No worries!
-				</div>
-			</div>
-		</div>
-		<div class="row" id="message-jake">
-			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-				<img src="jakehead.png" class="image-responsive" id="pic-quote" />
-			</div>
-			<div class="col-8" id="main">
-				<div class="box2 sb2">
-					Scroll down and get some more awesome quotes!
-				</div>
-			</div>
-		</div>
-		<div class="row" id="message-bmo">
-			<div class="col-md-4 offset-md-4"></div>
-			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-				<img src="bmo.png" class="image-responsive" id="pic-quote" />
-			</div>
-		</div>
-		<div class="container-fluid">
+		
+		<div class="container-fluid" id="customQuotesBackground">
 			<div class="row">
 				<div class="col-sm-12" id="thirdBlocktitle">
 					<span class="title">Custom Quotes</span>
 				</div>
 			</div>
-
 
 			<div class="row">
 				<div class="col-sm-6 text-center">
@@ -85,22 +61,24 @@
 
 
 			</div>
-			
+
 			<div class="row">
-				<div class="offset-3"></div>
-				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-					<button onclick="displayCustomQuote()" class="customQuotebtn">generate</button>
+				<div class="offset-4"></div>
+				<div class="col-lg-4 col-md-col-sm-12 col-xs-12">
+					<button onclick="displayCustomQuote()"
+						class="customQuotebtn">generate</button>
+					<button onclick="clearCustomQuote()"
+						class="removeCustomquoteBtn">meh!</button>
 				</div>
-				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-					<button onclick="clearCustomQuote()" class="removeCustomquoteBtn">meh!</button>
-				</div>
-				<div id="customQuote"><!-- the quote will display here -->
+				<div class="container" id="customQuote"><!-- the quote will display here -->
 				</div>
 			</div>
 		</div>
 
+		<footer>
+		</footer>
 
-
+		
 		<script src="test.js"></script>
 	</body>
 </html>

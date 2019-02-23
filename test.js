@@ -116,6 +116,11 @@ function displayCustomQuote() {
 			document.getElementById('customQuote').innerHTML = 
 				formerInnerHtml + "<b>" + randomCustomQuote + "</b></br></br>";
 		}
+		
+		// change bg color of custom quotes area
+		if (document.getElementById("quoteTheme").selectedIndex != 0) {
+			setColor();
+		}
 	}
 }
 
@@ -124,9 +129,39 @@ function clearCustomQuote() {
 	document.getElementById('customQuote').innerHTML = "";
 }
 
+//Colors in hex for bg color custom quotes bg.
+var colors = [
+	"#A9B9CB",
+	"#896A85",
+	"#81B2C9",
+	"#00C6AA",
+	"#24343C"
+];
 
 
+// better function name
+function setColor() {
+	var newColor = colors[Math.floor(Math.random() * (colors.length))];
+	document.getElementById("customQuotesBackground").style.backgroundColor = newColor; 
+}
 
 
+//Animation
+
+var elem=document.getElementById("randomQuote");
+var x=0;
+
+function moreVisible()
+{
+    if(x==1)clearInterval(t);
+    x+=0.05;
+    elem.style.opacity=x;
+    elem.style.filter="alpha(opacity="+(x*100)+")";
+}
+
+var t=setInterval(moreVisible,25);
+
+
+	  
 
 
