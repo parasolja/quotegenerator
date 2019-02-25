@@ -39,7 +39,7 @@ function getExpressionFromquoteParts() {
     var indexMiddle = getRandomNumberBetweenZeroAnd(middle.length);
     var indexLast = getRandomNumberBetweenZeroAnd(last.length);
     
-	
+//Displays a quote	
 	return first[indexFirst] + " " +
 		   middle[indexMiddle] + " " +
 		   last[indexLast];
@@ -48,7 +48,7 @@ function getExpressionFromquoteParts() {
 // rewrite function name
 function displayQuote() {
 	var randomQuote = getExpressionFromquoteParts();
-	document.getElementById('randomQuote').innerHTML = "<b>" + randomQuote + "</b>";
+	document.getElementById('randomQuote').innerHTML =  randomQuote;
 }
 
 //rewrite function name
@@ -56,33 +56,15 @@ function clearQuote() {
 	document.getElementById('randomQuote').innerHTML = "";
 }
 
-function indexCombinationAllowed(indexFirst, indexMiddle, indexLast) {
-	var allowed = true;
-	for (var i = 0; i < filter.length; i++) {
-		firstFilterElem = filter[i][0];
-		secondFilterElem = filter[i][1];
-		thirdFilterElem = filter[i][2];
-		if (indexFirst === firstFilterElem &&
-			indexMiddle === secondFilterElem &&
-			indexLast === thirdFilterElem) {
-			allowed = false;
-		}
-	}
-	return allowed;
-}
-
 
 //Custom Quote Generator
 
-// better function name
-function getExpressionFromquoteParts2() {
+function getExpressionForCustomQuotes() {
 	var quoteThemeDropdown = document.getElementById("quoteTheme");
 	var qtdIndex = quoteThemeDropdown.selectedIndex;
 	if(qtdIndex === 0) {
-		// display message, uebungsaufgabe
-		return "";
+		return "Please choose preferable theme and enjoy";
 	} else {
-		// explain why -1
 		var first = quoteParts[qtdIndex-1].first;
 		var middle = quoteParts[qtdIndex-1].middle;
 	    var last = quoteParts[qtdIndex-1].last;
@@ -98,12 +80,11 @@ function getExpressionFromquoteParts2() {
 }
 
 
-//rewrite function name
 function displayCustomQuote() {
 	var numbersDropdown = document.getElementById("numbers");
 	var numbersSelected = numbersDropdown.selectedIndex;
 	if(numbersSelected === 0) {
-		// message: select amount of custom quotes
+		return "Wait! You need to choose a number to see some awesome quotes";
 	} else {
 		// remove old quotes
 		clearCustomQuote();
@@ -111,10 +92,10 @@ function displayCustomQuote() {
 		// generate multiple quotes (as defined in numbers-dropdown)
 		var i;
 		for (i = 1; i <= numbersSelected; i++) {
-			var randomCustomQuote = getExpressionFromquoteParts2();
+			var randomCustomQuote = getExpressionForCustomQuotes();
 			var formerInnerHtml = document.getElementById('customQuote').innerHTML;
 			document.getElementById('customQuote').innerHTML = 
-				formerInnerHtml + "<b>" + randomCustomQuote + "</b></br></br>";
+				formerInnerHtml  + randomCustomQuote + "</b></br></br>";
 		}
 		
 		// change bg color of custom quotes area
@@ -124,7 +105,7 @@ function displayCustomQuote() {
 	}
 }
 
-//rewrite function name
+//Clear custom quote button
 function clearCustomQuote() {
 	document.getElementById('customQuote').innerHTML = "";
 }
@@ -135,33 +116,25 @@ var colors = [
 	"#896A85",
 	"#81B2C9",
 	"#00C6AA",
-	"#24343C"
+	"#24343C",
+	"#86C2A0",
+	"#82F9BF",
+	"#91A6B3",
+	"#318477",
+	"#824F65"
+		
+	
 ];
 
 
-// better function name
 function setColor() {
 	var newColor = colors[Math.floor(Math.random() * (colors.length))];
 	document.getElementById("customQuotesBackground").style.backgroundColor = newColor; 
 }
 
 
-//Animation
-
-var elem=document.getElementById("randomQuote");
-var x=0;
-
-function moreVisible()
-{
-    if(x==1)clearInterval(t);
-    x+=0.05;
-    elem.style.opacity=x;
-    elem.style.filter="alpha(opacity="+(x*100)+")";
-}
-
-var t=setInterval(moreVisible,25);
 
 
-	  
+
 
 

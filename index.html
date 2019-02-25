@@ -21,7 +21,7 @@
 		<div class="row">
 			<div class="col-12" id="bgimg">
 				<div class="caption">
-					<span class="title">Quotation Generator</span>
+					<span class="title">Random Quote Generator</span>
 				</div>
 				<button onclick="displayQuote()" class="quoteBtn">show me what you got!</button>
 
@@ -33,24 +33,28 @@
 		
 		<div class="container-fluid" id="customQuotesBackground">
 			<div class="row">
-				<div class="col-sm-12" id="thirdBlocktitle">
+				<div class="col-sm-12" id="secondBlockTitle">
 					<span class="title">Custom Quotes</span>
 				</div>
 			</div>
 
 			<div class="row">
+			<div class="offset-3"></div>
 				<div class="col-sm-6 text-center">
 					<label>Theme</label>
 					<select class="categories" name="quoteTheme" id="quoteTheme">
-						<option selected="true" disabled="disabled"> -- pick me! -- </option>
+						<option selected="true" disabled="disabled"> ----- pick me! ----- </option>
 						<option value="0">Love</option>
 						<option value="1">Wisdom</option>
 					</select>
 				</div>
-				<div class="col-sm-3 text-center">
-					<label>Number</label>
+				</div>
+				<div class="row">
+				<div class="offset-3"></div>
+				<div class="col-sm-6 text-center">
+					<label id="numberStyle">Number</label>
 					<select class="numbers" name="numbers" id="numbers">
-						<option selected="true" disabled="disabled"> -- and me! -- </option>
+						<option selected="true" disabled="disabled"> ----- and me! ----- </option>
 						<option value="1">1</option>
 						<option value="2">2</option>
 						<option value="3">3</option>
@@ -68,7 +72,7 @@
 					<button onclick="displayCustomQuote()"
 						class="customQuotebtn">generate</button>
 					<button onclick="clearCustomQuote()"
-						class="removeCustomquoteBtn">meh!</button>
+						class="removeCustomquoteBtn">destroy</button>
 				</div>
 				<div class="container" id="customQuote"><!-- the quote will display here -->
 				</div>
