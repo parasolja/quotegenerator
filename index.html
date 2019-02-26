@@ -18,16 +18,16 @@
 		</meta>
 	</head>
 	<body>
-		<div class="row">
+		<div class="container-fluid" id="randomQuoteContainer">
 			<div class="col-12" id="bgimg">
-				<div class="caption">
-					<span class="title">Random Quote Generator</span>
+				<div class="col-sm-12">
+					<span class="caption">Random Quote Generator</span>
 				</div>
 				<button onclick="displayQuote()" class="quoteBtn">show me what you got!</button>
 
 				<div id="randomQuote"><!-- the quote will display here -->
 				</div>
-				<button onclick="clearQuote()" class="removeQuotebtn">meh!</button>
+				<button onclick="clearRandomQuote()" class="removeQuotebtn">meh!</button>
 			</div>
 		</div>
 		
@@ -39,8 +39,8 @@
 			</div>
 
 			<div class="row">
-			<div class="offset-3"></div>
-				<div class="col-sm-6 text-center">
+			<div class="offset-2"></div>
+				<div class="col-lg-4 col-md-4 col-sm-12 text-center">
 					<label>Theme</label>
 					<select class="categories" name="quoteTheme" id="quoteTheme">
 						<option selected="true" disabled="disabled"> ----- pick me! ----- </option>
@@ -48,10 +48,10 @@
 						<option value="1">Wisdom</option>
 					</select>
 				</div>
-				</div>
-				<div class="row">
-				<div class="offset-3"></div>
-				<div class="col-sm-6 text-center">
+				
+
+				
+				<div class="col-lg-4 col-md-4 col-sm-12 text-center">
 					<label id="numberStyle">Number</label>
 					<select class="numbers" name="numbers" id="numbers">
 						<option selected="true" disabled="disabled"> ----- and me! ----- </option>
@@ -62,13 +62,14 @@
 						<option value="5">5</option>
 					</select>
 				</div>
+				</div>
 
 
-			</div>
+		
 
 			<div class="row">
 				<div class="offset-4"></div>
-				<div class="col-lg-4 col-md-col-sm-12 col-xs-12">
+				<div class="col-lg-4 col-md-8 col-sm-8 col-xs-8">
 					<button onclick="displayCustomQuote()"
 						class="customQuotebtn">generate</button>
 					<button onclick="clearCustomQuote()"
@@ -83,6 +84,6 @@
 		</footer>
 
 		
-		<script src="test.js"></script>
+		<script src="script.js"></script>
 	</body>
 </html>
