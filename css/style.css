@@ -1,35 +1,205 @@
-body {
-	font-family: 'Pacifico', cursive;
-	font-size: 22px;
-	color: white;
-	text-align: center;
-	margin-bottom: 35px;
-	background-image: url("cottoncandy.jpg");
-	background-repeat: no-repeat;
-	background-size: 100%;
 
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 22px;
+	background-size: 100%;
+	margin: 0;
 }
 
+#randomQuoteContainer {
+	padding: 0px;
+}
+
+#bgimg {
+	background-image: url("furr.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	text-align: center;
+	min-height: 700px;
+}
 
 .caption {
 	font-family: 'Pacifico', cursive;
-	font-size: 86px;
-	margin-top: 100px;
-	z-index: 2;
-	text-align: center;
-}
-
-.caption span.border {
+	font-size: 90px;
+	padding-top: 70px;
+	padding-bottom: 15px;
+	color: white;
 	background-color: transparent;
+	display: inline-block;
+	min-height: 200px;
+	overflow: hidden;
+	letter-spacing: 2px;
 }
 
-#hit-btn {
+.quoteBtn {
 	display: inline-block;
 	padding: 15px 25px;
 	font-size: 24px;
 	color: #fff;
-	background-color: #F8C5E2;
+	background-color: #FE97B1;
+	border-radius: 20px;
+	margin-top: 100px;
+	z-index: 2;
+}
+
+.removeQuotebtn {
+	display: inline-block;
+	padding: 15px 25px;
+	font-size: 24px;
+	color: #fff;
+	background-color: #FE97B1;
+	border-radius: 20px;
+	margin-top: 50px;
+	margin-bottom: 10px;
+	z-index: 2;
+}
+
+#randomQuote {
+	padding-top: 40px;
+	color: #364954;
+	font-weight: bold;
+}
+
+
+.container-fluid {
+	min-height: 680px;
+	background-color: #C695A2;
+}
+
+label {
+	color: white;	
+}
+
+select {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    border-radius: 0.5em;
+    width: 180px;
+    margin-left: 20px;
+}
+
+#secondBlockTitle {
+	font-family: 'Pacifico', cursive;
+	font-size: 90px;
+	text-align: center;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	color: #ffffff;
+	
+}
+
+.customQuotebtn {
+	display: inline-block;
+	padding: 15px 25px;
+	font-size: 24px;
+	color: #fff;
+	background-color: #FE97B1;
+	border-radius: 20px;
+	margin-top: 80px;
+	margin-right: 80px;
+	z-index: 2;
+}
+
+.removeCustomquoteBtn {
+	display: inline-block;
+	padding: 15px 25px;
+	font-size: 24px;
+	color: #fff;
+	background-color: #FE97B1;
 	border-radius: 20px;
 	margin-top: 80px;
 	z-index: 2;
+}
+
+#customQuote {
+	color: white;
+	font-weight:bold;
+	text-align: center;
+	padding-top: 40px;	
+}
+
+footer {
+	min-height: 200px;
+	background-image: url("furr.jpg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+@media ( max-width : 575.98px) {
+
+	.caption {
+		font-family: 'Pacifico', cursive;
+		font-size: 100px;
+		text-align: center;
+		padding-top: 80px;
+		padding-bottom: 80px;
+		color: #ffffff;
+		animation: none;
+	}
+	
+	footer {
+		background-image: linear-gradient(to right top, #d16ba5, #c777b9, 
+						#ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe,
+						 #41dfff, #46eefa, #5ffbf1);
+	}
+	
+	#bgimg {
+		 background-image: linear-gradient(to left top, #e361ab, #d06abc,
+						  #b973c9, #a07cd1, #8683d5, #7290dd, #5f9be0, #50a5e0, 
+						  #51b8e4, #62c9e5, #7cdae4, #9be9e4);
+		text-align: center;
+	}
+	
+	#randomQuote {
+			padding-top: 40px;
+			color: #ffffff;
+			font-weight: bold;
+	}
+
+}
+
+@media ( min-width : 1000px) {
+	.caption {
+	font-family: 'Pacifico', cursive;
+	font-size: 90px;
+	padding-top: 70px;
+	padding-bottom: 15px;
+	color: white;
+	background-color: transparent;
+	display: inline-block;
+	min-height: 200px;
+	overflow: hidden;
+	letter-spacing: 2px;
+	animation: typing 5s steps(30, end), blink .75s step-end infinite;
+	white-space: nowrap;
+	border-right: 4px solid #f8c5e2;
+	box-sizing: border-box;
+}
+
+@keyframes typing {
+	from { 
+		width:0%
+	
+	}
+
+to {
+	width: 90%
+	}
+
+}
+@keyframes blink {
+	from , to { 
+		border-color:transparent	
+	}
+
+50% {
+border-color: #f8c5e2;
+     
+	}
+
+	}
 }
